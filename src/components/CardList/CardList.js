@@ -4,19 +4,28 @@ import { Grid } from '@mui/material'
 const CardList = ({title}) => {
     const productos= [
         {
-            title: 'Tarta',
+            title: 'Tarta de coco',
             price: 2500,
-            image: 'tarta-de-coco.jpg'
+            image: 'Tarta-de-coco.jpg',
+            stock: 5
         },
         {
-            title: 'Tarta',
-            price: 2500,
-            image: 'tarta-de-coco.jpg'
+            title: 'Tarta de frambuesa',
+            price: 1500,
+            image: 'Tarta-de-Frambuesa.jpg',
+            stock: 5
         },
         {
-            title: 'Tarta',
-            price: 2500,
-            image: 'tarta-de-coco.jpg'
+            title: 'Tarta de ricota',
+            price: 2000,
+            image: 'Tarta-de-ricota.jpg',
+            stock: 5
+        },
+        {
+            title: 'Tarta de manzana',
+            price: 2000,
+            image: 'Tarta-de-manzana.jpg',
+            stock: 5
         }
     ]
     return(
@@ -24,16 +33,16 @@ const CardList = ({title}) => {
         <h2>{title}</h2>
         <Grid container >
             <Grid item md={3}>
-                <CardItem title={"Tarta de coco"} price={2500} image={"Tarta-de-coco.jpg"}/>  
+                <CardItem title={"Tarta de coco"} price={2500} image={"Tarta-de-coco.jpg"} stock={5}/>  
             </Grid>
             <Grid item md={3}>
-                <CardItem title={"Tarta de frambuesa"} price={1500} image={"Tarta-de-Frambuesa.jpg"}/>  
+                <CardItem title={"Tarta de frambuesa"} price={1500} image={"Tarta-de-Frambuesa.jpg"} stock={5}/>  
             </Grid>
             <Grid item md={3}>
-                <CardItem title={"Tarta de ricota "} price={2000} image={"Tarta-de-ricota.jpg"}/>  
+                <CardItem title={"Tarta de ricota "} price={2000} image={"Tarta-de-ricota.jpg"} stock={5}/>  
             </Grid>
             <Grid item md={3}>
-                <CardItem title={"Tarta de manzana "} price={2000} image={"Tarta-de-manzana.jpg"}/>  
+                <CardItem title={"Tarta de manzana "} price={2000} image={"Tarta-de-manzana.jpg"} stock={5}/>  
             </Grid>
         </Grid>
         </>

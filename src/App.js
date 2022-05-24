@@ -10,8 +10,10 @@ function App() {
     <div className="App">
       <NavBar />
       <div className='general-container'>
-        <CardList title={'Delicias Dulces'} />
-        <CardList title={'Lunch'}/>
+        <div className='seccion-style'><img src="./seccion_tartas.jpg"/></div>
+        <CardList/>
+        <div className='seccion-style'><img src="./seccion_lunch.jpg"/></div>
+        <CardList/>
       </div> 
     </div>
   );

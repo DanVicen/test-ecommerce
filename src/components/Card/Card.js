@@ -2,10 +2,12 @@ import './Card.css'
 import Card from '@mui/material/Card'
 import CardContent from '@mui/material/CardContent'
 import { Button } from '@mui/material'
+import { useState } from 'react'
+import ItemCount from '../ItemCount/ItemCount';
 
 const CardItem = (props) => {
-    const { image, title, price } = props
-    console.log("Propiedades de Card: ", props)
+    const { image, title, price, stock } = props
+    
     return(
         <Card sx={{ minWidth: 275 }}>
             <CardContent>
@@ -14,8 +16,11 @@ const CardItem = (props) => {
                         <img src={`./${image}`}/>
                     </div>
                     <p>{title}</p>
-                    <span>$ {price}</span>
-                    <Button variant={'outlined'}>Detalle</Button>
+                    <span>${price}</span>
+                    <div>
+                        <ItemCount stock={stock}/>
+                    </div>
+                    <Button variant={'outlined'}>Agregar al carrito</Button>
                 </div>
             </CardContent>
         </Card>
