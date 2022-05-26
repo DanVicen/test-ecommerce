@@ -1,49 +1,25 @@
 import CardItem from '../Card/Card'
 import { Grid } from '@mui/material'
+import { useState, useEffect } from 'react'
+import ItemListContainer from '../ItemListContainer/ItemListContainer'
 
-const CardList = ({title}) => {
-    const productos= [
-        {
-            title: 'Tarta de coco',
-            price: 2500,
-            image: 'Tarta-de-coco.jpg',
-            stock: 5
-        },
-        {
-            title: 'Tarta de frambuesa',
-            price: 1500,
-            image: 'Tarta-de-Frambuesa.jpg',
-            stock: 5
-        },
-        {
-            title: 'Tarta de ricota',
-            price: 2000,
-            image: 'Tarta-de-ricota.jpg',
-            stock: 5
-        },
-        {
-            title: 'Tarta de manzana',
-            price: 2000,
-            image: 'Tarta-de-manzana.jpg',
-            stock: 5
-        }
-    ]
+const CardList = ({title, products}) => {
+    
     return(
         <>
         <h2>{title}</h2>
-        <Grid container >
-            <Grid item md={3}>
-                <CardItem title={"Tarta de coco"} price={2500} image={"Tarta-de-coco.jpg"} stock={5}/>  
-            </Grid>
-            <Grid item md={3}>
-                <CardItem title={"Tarta de frambuesa"} price={1500} image={"Tarta-de-Frambuesa.jpg"} stock={5}/>  
-            </Grid>
-            <Grid item md={3}>
-                <CardItem title={"Tarta de ricota "} price={2000} image={"Tarta-de-ricota.jpg"} stock={5}/>  
-            </Grid>
-            <Grid item md={3}>
-                <CardItem title={"Tarta de manzana "} price={2000} image={"Tarta-de-manzana.jpg"} stock={5}/>  
-            </Grid>
+        {console.log("state products: ", products)}
+        <Grid container spacing={1}>
+            {
+                products.map( (producto) => {
+                    const {id, title, price, image, stock, description} = producto
+                    return(
+                        <Grid item md={3} key={id}>
+                            <CardItem id={id} title={title} price={price} image={image} stock={stock} description={description}/>  
+                        </Grid>
+                    )
+                })
+            }
         </Grid>
         </>
     )
