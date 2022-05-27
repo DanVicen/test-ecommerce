@@ -1,7 +1,5 @@
 import CardItem from '../Card/Card'
 import { Grid } from '@mui/material'
-import { useState, useEffect } from 'react'
-import ItemListContainer from '../ItemListContainer/ItemListContainer'
 
 const CardList = ({title, products}) => {
     

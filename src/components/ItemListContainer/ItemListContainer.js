@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react"
+import CardList from '../CardList/CardList'
 
-const ItemListContainer = (props) => {
+const ItemListContainer = () => {
 
     const [products, setProducts] = useState ([])
     const productos= [
@@ -55,6 +56,12 @@ const ItemListContainer = (props) => {
         })
     
     }, [])
+
+    return (
+        <div>
+            <CardList products={productos} title={''} />
+        </div>
+    )
 }
 
 export default ItemListContainer

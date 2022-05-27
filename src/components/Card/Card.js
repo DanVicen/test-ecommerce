@@ -2,8 +2,7 @@ import './Card.css'
 import Card from '@mui/material/Card'
 import CardContent from '@mui/material/CardContent'
 import { Button } from '@mui/material'
-import { useState } from 'react'
-import ItemCount from '../ItemCount/ItemCount';
+import ItemCount from '../ItemCount/ItemCount'
 
 const CardItem = (props) => {
     const { image, title, price, stock } = props
