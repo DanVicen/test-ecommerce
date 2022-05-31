@@ -2,7 +2,8 @@ import { blue } from '@mui/material/colors'
 import './App.css'
 import NavBar from './components/NavBar/NavBar'
 import CardList from './components/CardList/CardList'
-import ItemListContainer from './components/ItemListContainer/ItemListContainer'
+import ProductsListContainer from './components/ProductsListContainer/ProductsListContainer'
+import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer'
 
 function App() {
 
@@ -12,9 +13,8 @@ function App() {
       <NavBar />
       <div className='general-container'>
         <div className='seccion-style'><img src="./seccion_tartas.jpg"/></div>
-        <ItemListContainer />
-        <div className='seccion-style'><img src="./seccion_lunch.jpg"/></div>
-        <ItemListContainer />
+        <ProductsListContainer />
+        <ItemDetailContainer />
       </div> 
     </div>
   );

@@ -22,13 +22,11 @@
 .header-primary .navbar .navbar__btn {
     font-family: 'Lato', sans-serif;
     text-transform: none;
-    font-weight: 300;
+    font-weight: 100;
     font-size: 16px;
-    color: brown;
-    border-top: 3px solid #ccc;
-    border-bottom: 3px solid #ccc;
-    border-right: 3px solid #ccc;
-    border-left: 3px solid #ccc;
+    color: whitesmoke;
+    
+    border-radius: 4px;
 }
 .header-primary .navbar .navbar__btn:hover {
     font-weight: 600;

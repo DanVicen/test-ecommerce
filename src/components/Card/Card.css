@@ -1,14 +1,15 @@
 .card-item img{
-    width: 70%;
+    width: 80%;
 }
 
 .card-item {
     display: flex;
     flex-direction: column;
-    border-top: 3px solid #ccc;
-    border-bottom: 3px solid #ccc;
-    border-right: 3px solid #ccc;
-    border-left: 3px solid #ccc;
+    border-top: 1px solid brown;
+    border-bottom: 1px solid brown;
+    border-right: 1px solid brown;
+    border-left: 1px solid brown;
+    border-radius: 5px;
 }
 
 .card-item p {

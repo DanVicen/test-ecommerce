@@ -13,19 +13,19 @@ const NavBar = () => {
                 </div>
                 <ul className='navbar'>
                     <li>
-                        <button disableRipple style={{ backgroundColor: 'transparent'}} variant='text' className='navbar__btn'>Productos</button>
+                        <Button disableRipple style={{ backgroundColor: 'brown'}} variant='contained' className='navbar__btn'>Productos</Button>
                     </li>
                     <li>
-                        <button disableRipple style={{ backgroundColor: 'transparent'}} variant='text' className='navbar__btn'>Sin TACC</button>
+                        <Button disableRipple style={{ backgroundColor: 'brown'}} variant='contained' className='navbar__btn'>Sin TACC</Button>
                     </li>
                     <li>
-                        <button disableRipple style={{ backgroundColor: 'transparent'}} variant='text' className='navbar__btn'>Eventos</button>
+                        <Button disableRipple style={{ backgroundColor: 'brown'}} variant='contained' className='navbar__btn'>Eventos</Button>
                     </li>
                     <li>
-                        <button disableRipple style={{ backgroundColor: 'transparent'}} variant='text' className='navbar__btn'>Sobre nosotros</button>
+                        <Button disableRipple style={{ backgroundColor: 'brown'}} variant='contained' className='navbar__btn'>Sobre nosotros</Button>
                     </li>
                     <li>
-                        <button disableRipple style={{ backgroundColor: 'transparent'}} variant='text' className='navbar__btn'>Contacto</button>
+                        <Button disableRipple style={{ backgroundColor: 'brown'}} variant='contained' className='navbar__btn'>Contacto</Button>
                     </li>
                 </ul>
                 <CartWidget />

@@ -19,7 +19,7 @@ const CardItem = (props) => {
                     <div>
                         <ItemCount stock={stock}/>
                     </div>
-                    <Button variant={'outlined'}>Agregar al carrito</Button>
+                    <Button variant={'contained'}>Agregar al carrito</Button>
                 </div>
             </CardContent>
         </Card>

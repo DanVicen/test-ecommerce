@@ -1,0 +1,36 @@
+.item-card img{
+    width: 60%;
+}
+
+.item-card {
+    display: flex;
+    flex-direction: row;
+    border-top: 1px solid brown ;
+    border-bottom: 1px solid brown;
+    border-right: 1px solid brown ;
+    border-left: 1px solid brown;
+    border-radius: 3px;
+    align-items: flex-start;
+}
+
+.item-cards {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}    
+
+.item-card p {
+    font-size: 50px;
+    font-weight:900;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.item-card span {
+    margin-bottom: 10px;
+    font-size: 24px;
+    align-items: flex-start;
+    display: flex;
+}

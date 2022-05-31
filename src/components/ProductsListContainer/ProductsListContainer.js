@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react"
 import CardList from '../CardList/CardList'
 
-const ItemListContainer = () => {
+const ProductsListContainer = () => {
 
     const [products, setProducts] = useState ([])
     const productos= [
@@ -64,4 +64,14 @@ const ItemListContainer = () => {
     )
 }
 
-export default ItemListContainer
+const producto = {
+        id: 1,
+        title: 'Tarta de coco',
+        price: 2500,
+        image: 'Tarta-de-coco.jpg',
+        stock: 5,
+        description: 'Masa de tarta rellena con dulce de leche, con coquitos en la cobertura. Se hace solo por pedido con un día de anticipación.'
+}
+
+export default ProductsListContainer
+export { producto }
