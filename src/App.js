@@ -1,21 +1,31 @@
 import { blue } from '@mui/material/colors'
 import './App.css'
 import NavBar from './components/NavBar/NavBar'
-import CardList from './components/CardList/CardList'
-import ProductsListContainer from './components/ProductsListContainer/ProductsListContainer'
-import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Home from './pages/Home'
+import SinTacc from './pages/SinTacc'
+import Events from './pages/Events'
+import AboutUs from './pages/AboutUs'
+import Contact from './pages/Contact'
+import Detail from './pages/Detail'
 
 function App() {
 
   return (
     //JSX
     <div className="App">
-      <NavBar />
-      <div className='general-container'>
-        <div className='seccion-style'><img src="./seccion_tartas.jpg"/></div>
-        <ProductsListContainer />
-        <ItemDetailContainer />
-      </div> 
+      <BrowserRouter>
+        <NavBar />
+        <Routes>
+          <Route path='/' element={<Home />}/>
+          <Route path='/SinTacc' element={<SinTacc />}/>
+          <Route path='/Events' element={<Events />}/>
+          <Route path='/AboutUs' element={<AboutUs />}/>
+          <Route path='/Contact' element={<Contact />}/>
+          <Route path='/product/:id' element={<Detail />}/>
+          <Route path='*' element={<h1>Página no encontrada</h1>}/>
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }

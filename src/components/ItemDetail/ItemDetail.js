@@ -7,7 +7,7 @@ import { Button } from '@mui/material'
 const ItemDetail = ({data}) => {
     return (
         <div>
-            <Card sx={{ minWidth: 200 }}>
+            <Card sx={{ minWidth: 100 }}>
             <CardContent>
                 <div className="item-card">
                     <div>

@@ -4,9 +4,11 @@
     border-bottom: #ccc;
     display: flex;
     height: 20px;
+    color: whitesmoke;
 }
 .container-logo {
-    width: 240px;
+    width: 280px;
+    margin-top: 8px;
 }
 .container-logo img {
     width: 100%;
@@ -14,10 +16,11 @@
 .header-primary {
     background: none !important;
     box-shadow: none !important;
-    border-bottom: 1px solid #ccc;
+    
 }
 .header-primary .navbar li {
     margin-right: 30px;
+    color: whitesmoke;
 }
 .header-primary .navbar .navbar__btn {
     font-family: 'Lato', sans-serif;
@@ -25,7 +28,6 @@
     font-weight: 100;
     font-size: 16px;
     color: whitesmoke;
-    
     border-radius: 4px;
 }
 .header-primary .navbar .navbar__btn:hover {

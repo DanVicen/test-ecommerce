@@ -4,14 +4,15 @@ import CardList from '../CardList/CardList'
 const ProductsListContainer = () => {
 
     const [products, setProducts] = useState ([])
-    const productos= [
+    const productos = [
         {
             id: 1,
             title: 'Tarta de coco',
             price: 2500,
             image: 'Tarta-de-coco.jpg',
             stock: 5,
-            description: ''
+            description: '',
+            category: 'Tartas'
         },
         {
             id: 2,
@@ -19,7 +20,8 @@ const ProductsListContainer = () => {
             price: 1500,
             image: 'Tarta-de-Frambuesa.jpg',
             stock: 5,
-            description: ''
+            description: '',
+            category: 'Tartas'
         },
         {
             id: 3,
@@ -27,7 +29,8 @@ const ProductsListContainer = () => {
             price: 2000,
             image: 'Tarta-de-ricota.jpg',
             stock: 5,
-            description: ''
+            description: '',
+            category: 'Tartas'
         },
         {
             id: 4,
@@ -35,7 +38,8 @@ const ProductsListContainer = () => {
             price: 2000,
             image: 'Tarta-de-manzana.jpg',
             stock: 5,
-            description: ''
+            description: '',
+            category: 'Tartas'
         }
     ]
 

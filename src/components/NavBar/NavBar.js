@@ -1,4 +1,5 @@
 import './NavBar.css'
+import { Link } from 'react-router-dom'
 import AppBar from '@mui/material/AppBar'
 import Toolbar from '@mui/material/Toolbar'
 import Button from '@mui/material/Button'
@@ -13,19 +14,54 @@ const NavBar = () => {
                 </div>
                 <ul className='navbar'>
                     <li>
-                        <Button disableRipple style={{ backgroundColor: 'brown'}} variant='contained' className='navbar__btn'>Productos</Button>
+                        <Button 
+                            disableRipple 
+                            style={{ backgroundColor: 'brown'}} 
+                            variant='contained' 
+                            className='navbar__btn'
+                        >
+                            <Link to="/">Productos</Link>
+                        </Button>
                     </li>
                     <li>
-                        <Button disableRipple style={{ backgroundColor: 'brown'}} variant='contained' className='navbar__btn'>Sin TACC</Button>
+                        <Button 
+                            disableRipple 
+                            style={{ backgroundColor: 'brown'}} 
+                            variant='contained' 
+                            className='navbar__btn'
+                        >
+                            <Link to="/SinTACC">Sin TACC</Link>
+                        </Button>
                     </li>
                     <li>
-                        <Button disableRipple style={{ backgroundColor: 'brown'}} variant='contained' className='navbar__btn'>Eventos</Button>
+                        <Button 
+                            disableRipple 
+                            style={{ backgroundColor: 'brown'}} 
+                            variant='contained' 
+                            className='navbar__btn'
+                        >
+                            <Link to="/Events">Eventos</Link>
+                        </Button>
                     </li>
                     <li>
-                        <Button disableRipple style={{ backgroundColor: 'brown'}} variant='contained' className='navbar__btn'>Sobre nosotros</Button>
+                        <Button 
+                            disableRipple 
+                            style={{ backgroundColor: 'brown'}} 
+                            variant='contained' 
+                            className='navbar__btn'
+                        >
+                            <Link to="/AboutUs">Sobre nosotros</Link>
+                        </Button>
                     </li>
                     <li>
-                        <Button disableRipple style={{ backgroundColor: 'brown'}} variant='contained' className='navbar__btn'>Contacto</Button>
+                        <Button 
+                            disableRipple 
+                            style={{ backgroundColor: 'brown'}} 
+                            variant='contained' 
+                            className='navbar__btn'
+                        >
+                            <Link to="/Contact">Contacto</Link>
+                        </Button>
                     </li>
                 </ul>
                 <CartWidget />
