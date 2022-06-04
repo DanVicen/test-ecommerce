@@ -1,81 +1,38 @@
 import { useState, useEffect } from "react"
 import CardList from '../CardList/CardList'
+import { fetchProductsByCategory } from '../../api/products'
+import { useParams } from 'react-router-dom'
 
 const ProductsListContainer = () => {
 
     const [products, setProducts] = useState ([])
-    const productos = [
-        {
-            id: 1,
-            title: 'Tarta de coco',
-            price: 2500,
-            image: 'Tarta-de-coco.jpg',
-            stock: 5,
-            description: '',
-            category: 'Tartas'
-        },
-        {
-            id: 2,
-            title: 'Tarta de frambuesa',
-            price: 1500,
-            image: 'Tarta-de-Frambuesa.jpg',
-            stock: 5,
-            description: '',
-            category: 'Tartas'
-        },
-        {
-            id: 3,
-            title: 'Tarta de ricota',
-            price: 2000,
-            image: 'Tarta-de-ricota.jpg',
-            stock: 5,
-            description: '',
-            category: 'Tartas'
-        },
-        {
-            id: 4,
-            title: 'Tarta de manzana',
-            price: 2000,
-            image: 'Tarta-de-manzana.jpg',
-            stock: 5,
-            description: '',
-            category: 'Tartas'
-        }
-    ]
-
-    const getProducts = () => {
-        return new Promise( (resolve, reject) => {
-            setTimeout(() => {
-                resolve(productos)
-            }, 2000)
-        })
-    }
-
+    const [loadingProducts, setLoadingProducts] = useState(false)
+    const { categoryId } = useParams()
+    
     useEffect ( () => {
-        getProducts()
+        setLoadingProducts(true)
+        fetchProductsByCategory(parseInt(categoryId))
         .then( (response) => {
+            setLoadingProducts(false)
             setProducts(response)
         })
         .catch( (err) => {
+            setLoadingProducts(false)
         })
     
-    }, [])
+    }, [categoryId])
+
+    if (loadingProducts) {
+        return (
+            <h1>CARGANDO</h1>
+        )
+    }
 
     return (
         <div>
-            <CardList products={productos} title={''} />
+            <CardList products={products} title={''} />
         </div>
     )
 }
 
-const producto = {
-        id: 1,
-        title: 'Tarta de coco',
-        price: 2500,
-        image: 'Tarta-de-coco.jpg',
-        stock: 5,
-        description: 'Masa de tarta rellena con dulce de leche, con coquitos en la cobertura. Se hace solo por pedido con un día de anticipación.'
-}
-
 export default ProductsListContainer
-export { producto }

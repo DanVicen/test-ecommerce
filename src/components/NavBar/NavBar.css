@@ -44,6 +44,5 @@
     width: 0;
     transition: width 0.3s ease;
     height: 1px;
-    background: black;
     bottom: 5px;
 }

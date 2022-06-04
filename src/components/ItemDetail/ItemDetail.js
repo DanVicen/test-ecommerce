@@ -11,7 +11,7 @@ const ItemDetail = ({data}) => {
             <CardContent>
                 <div className="item-card">
                     <div>
-                        <img src={`./${data.image}`}/>
+                        <img src={`/${data.image}`}/>
                     </div>
                     <div className="item-cards">
                         <p>{data.title}</p>

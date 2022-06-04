@@ -1,8 +1,6 @@
 const Events = () => {
     return(
-        <div>
-            Página Eventos
-        </div>
+        <div className='seccion-style'><img src="./seccion_eventos.jpg"/></div>
     )
 }
 
