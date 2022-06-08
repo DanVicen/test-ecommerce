@@ -5,10 +5,13 @@ import { Button } from '@mui/material'
 import ItemCount from '../ItemCount/ItemCount'
 import { Link } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
+import { useState } from 'react'
 
 const CardItem = (props) => {
     const { image, title, price, stock, id } = props
     const navigate = useNavigate()
+    const [cantidad, setCantidad] = useState(1)
+    
     return(
         <Card sx={{ minWidth: 275 }}>
             <CardContent>
@@ -20,18 +23,20 @@ const CardItem = (props) => {
                         />
                     </div>
                     <p>{title}</p>
-                    <span>${price}</span>
+                    <p>${price}</p>
                     <div>
-                        <ItemCount stock={stock}/>
+                        <ItemCount 
+                            cantidad={cantidad}
+                            setCantidad={setCantidad}    
+                        />
                     </div>
                     <Button onClick={() => {
                         navigate(`/product/${id}`, {
                             state: props,
                         })
-                    }} variant={'contained'}>
-                        <span>Ver detalle</span>
+                    }}>
+                        <Button variant={'contained'}>Ver detalle</Button>
                     </Button>
-                    <Button variant={'contained'}>Agregar al carrito</Button>
                 </div>
             </CardContent>
         </Card>

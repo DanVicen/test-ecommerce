@@ -2,6 +2,7 @@ import { useState, useEffect } from "react"
 import CardList from '../CardList/CardList'
 import { fetchProductsByCategory } from '../../api/products'
 import { useParams } from 'react-router-dom'
+import { CircularProgress } from "@mui/material"
 
 const ProductsListContainer = () => {
 
@@ -24,7 +25,7 @@ const ProductsListContainer = () => {
 
     if (loadingProducts) {
         return (
-            <h1>CARGANDO</h1>
+            <h1><CircularProgress /> CARGANDO...</h1>
         )
     }
 

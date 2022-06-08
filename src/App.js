@@ -8,6 +8,7 @@ import Contact from './pages/Contact'
 import Detail from './pages/Detail'
 import Events from './pages/Events'
 import ProductsListContainer from './components/ProductsListContainer/ProductsListContainer'
+import Cart from './pages/Cart'
 
 function App() {
 
@@ -24,6 +25,7 @@ function App() {
           <Route path='/product/:id' element={<Detail />}/>
           <Route path='/products/:categoryId' element={<ProductsListContainer />}/>
           <Route path='*' element={<h1>Página no encontrada</h1>}/>
+          <Route path='/Cart' element={<Cart />}/>
         </Routes>
       </BrowserRouter>
     </div>

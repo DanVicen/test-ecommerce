@@ -3,8 +3,19 @@ import Card from "@mui/material/Card"
 import CardContent from "@mui/material/CardContent"
 import './ItemDetail.css'
 import { Button } from '@mui/material'
+import { useState } from "react"
+import { Link } from "react-router-dom"
 
 const ItemDetail = ({data}) => {
+    
+    const [cantidad, setCantidad] = useState(1)
+    const [showButton, setShowButton] = useState(false)
+    
+    const addProductToCart = () => {
+        console.log("Producto a agregar", data)
+        console.log("Cantidad", cantidad)
+    }
+
     return (
         <div>
             <Card sx={{ minWidth: 100 }}>
@@ -18,8 +29,15 @@ const ItemDetail = ({data}) => {
                         <span>Precio unidad: ${data.price}</span>
                         <span>Disponibles: {data.stock}</span>
                         <span>Descripción: {data.description}</span>
-                        <ItemCount stock={data.stock}/>
-                        <Button variant={'contained'}>Agregar al carrito</Button>
+                        {!showButton ?
+                        <ItemCount 
+                            setCantidad={setCantidad}
+                            stock={data.stock}
+                            cantidad={cantidad}
+                            setShowButton={setShowButton}
+                        />
+                        :
+                        <Button variant='contained'><Link style={{ color: '#FFF' }}to='/cart'>Finalizar compra</Link></Button>}
                     </div>
                 </div>
             </CardContent>

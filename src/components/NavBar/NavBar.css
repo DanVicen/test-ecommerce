@@ -3,11 +3,11 @@
     width: 100%;
     border-bottom: #ccc;
     display: flex;
-    height: 20px;
+    height: 40px;
     color: whitesmoke;
 }
 .container-logo {
-    width: 280px;
+    width: 350px;
     margin-top: 8px;
 }
 .container-logo img {

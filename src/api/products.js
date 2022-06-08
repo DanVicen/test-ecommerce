@@ -107,13 +107,22 @@ const productos = [
         description: '',
         categoryId: 4,
     },
+    {
+        id: 9,
+        title: 'Alfajorcitos',
+        price: 2800,
+        image: 'Alfajorcitos.jpg',
+        stock: 100,
+        description: 'Precio por Kg. En caso de precisar un peso distinto, por favor aclarar en las observaciones del presupuesto al finalizarlo.',
+        categoryId: 3,
+    },
 ]
 
 export const fetchProducts = () => {
     return new Promise( (resolve, reject) => {
         setTimeout(() => {
             resolve(productos)
-        }, 2000)
+        }, 1000)
     })
 }
 
@@ -122,6 +131,6 @@ export const fetchProductsByCategory = (categoryId) => {
         setTimeout(() => {
             const filteredProducts = productos.filter(product => product.categoryId === categoryId)
             resolve(filteredProducts)
-        }, 2000)
+        }, 1000)
     })
 }
