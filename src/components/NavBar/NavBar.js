@@ -8,6 +8,7 @@ import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import { useState } from 'react'
 import { categorias } from '../../api/products'
+import { color } from '@mui/system'
 
 const NavBar = () => {
     
@@ -36,7 +37,7 @@ const NavBar = () => {
                             variant='contained' 
                             className='navbar__btn'
                         >
-                            <Link to="/" style={{ color: '#FFF' }}>Inicio</Link>
+                            <Link to="/" style={{ textDecoration: 'none', color:'#FFF' }}>Inicio</Link>
                         </Button>
                     </li>
                     <li>
@@ -77,7 +78,7 @@ const NavBar = () => {
                             variant='contained' 
                             className='navbar__btn'
                         >
-                            <Link to="/products/1" style={{ color: '#FFF' }}>Sin TACC</Link>
+                            <Link to="/products/1" style={{ textDecoration: 'none', color:'#FFF' }}>Sin TACC</Link>
                         </Button>
                     </li>
                     <li>
@@ -87,7 +88,7 @@ const NavBar = () => {
                             variant='contained' 
                             className='navbar__btn'
                         >
-                            <Link to="/Events" style={{ color: '#FFF' }}>Eventos</Link>
+                            <Link to="/Events" style={{ textDecoration: 'none', color:'#FFF' }}>Eventos</Link>
                         </Button>
                     </li>
                     <li>
@@ -97,7 +98,7 @@ const NavBar = () => {
                             variant='contained' 
                             className='navbar__btn'
                         >
-                            <Link to="/Contact" style={{ color: '#FFF' }}>Contacto</Link>
+                            <Link to="/Contact" style={{ textDecoration: 'none', color:'#FFF' }}>Contacto</Link>
                         </Button>
                     </li>
                 </ul>

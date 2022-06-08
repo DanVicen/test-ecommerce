@@ -37,7 +37,7 @@ const ItemDetail = ({data}) => {
                             setShowButton={setShowButton}
                         />
                         :
-                        <Button variant='contained'><Link style={{ color: '#FFF' }}to='/cart'>Finalizar compra</Link></Button>}
+                        <Button variant='contained'><Link style={{ textDecoration: 'none', color:'#FFF' }}to='/cart'>Finalizar compra</Link></Button>}
                     </div>
                 </div>
             </CardContent>
