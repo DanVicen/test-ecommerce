@@ -11,6 +11,7 @@
     border-left: 1px solid gray;
     border-radius: 3px;
     align-items: flex-start;
+
 }
 
 .item-cards {
@@ -20,7 +21,7 @@
 }    
 
 .item-card p {
-    font-size: 50px;
+    font-size: 24px;
     font-weight:900;
     margin-top: 10px;
     margin-bottom: 10px;

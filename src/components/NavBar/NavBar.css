@@ -19,7 +19,7 @@
     
 }
 .header-primary .navbar li {
-    margin-right: 30px;
+    margin-right: 40px;
     color: whitesmoke;
 }
 .header-primary .navbar .navbar__btn {
@@ -45,4 +45,8 @@
     transition: width 0.3s ease;
     height: 1px;
     bottom: 5px;
+}
+
+.dark-mode {
+    background: black !important;
 }

@@ -22,7 +22,9 @@ const ItemDetail = ({data}) => {
             <CardContent>
                 <div className="item-card">
                     <div>
-                        <img src={`/${data.image}`}/>
+                        <img src={`/${data.image}`} style={{
+                            width: 240
+                        }}/>
                     </div>
                     <div className="item-cards">
                         <p>{data.title}</p>

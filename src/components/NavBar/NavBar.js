@@ -4,16 +4,17 @@ import AppBar from '@mui/material/AppBar'
 import Toolbar from '@mui/material/Toolbar'
 import Button from '@mui/material/Button'
 import CartWidget from '../CartWidget/CartWidget'
-import Menu from '@mui/material/Menu';
-import MenuItem from '@mui/material/MenuItem';
-import { useState } from 'react'
+import Menu from '@mui/material/Menu'
+import MenuItem from '@mui/material/MenuItem'
+import { useState, useContext } from 'react'
 import { categorias } from '../../api/products'
-import { color } from '@mui/system'
+import ThemeSwitch from './ThemeSwitch'
+import { ThemeContext } from '../../context/ThemeContext'
 
 const NavBar = () => {
-    
+
+    const { darkTheme } = useContext(ThemeContext)
     const [anchorEl, setAnchorEl] = useState(null);
-    
     const open = Boolean(anchorEl);
     
     const handleClick = (event) => {
@@ -24,7 +25,7 @@ const NavBar = () => {
     };
     
     return (
-        <AppBar position="static" className='header-primary'>
+        <AppBar position="static" className={`header-primary ${darkTheme ? 'dark-mode' : ''}`}>
             <Toolbar>
                 <div className='container-logo'>
                     <img src="/vicentelopez_logo.jpg"/>
@@ -66,7 +67,7 @@ const NavBar = () => {
                             {categorias
                             .filter(cat => !cat.mostrarSeparado)
                             .map( (cat) => {
-                                return <MenuItem onClick={handleClose}><Link to={`/products/${cat.id}`}  style={{ color: 'brown' }}>{cat.name}</Link></MenuItem>
+                                return <MenuItem onClick={handleClose}><Link to={`/products/${cat.id}`}  style={{ color: 'brown', textDecoration: 'none', fontSize: '16px', fontWeight: '100'                         }}>{cat.name}</Link></MenuItem>
                             })}
                         </Menu>
                     </li>
@@ -102,6 +103,7 @@ const NavBar = () => {
                         </Button>
                     </li>
                 </ul>
+                <ThemeSwitch />
                 <CartWidget />
             </Toolbar>
         </AppBar>

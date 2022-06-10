@@ -25,7 +25,7 @@ const ProductsListContainer = () => {
 
     if (loadingProducts) {
         return (
-            <h1><CircularProgress /> CARGANDO...</h1>
+            <h1><CircularProgress/></h1>
         )
     }
 
