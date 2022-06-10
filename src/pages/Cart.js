@@ -1,7 +1,10 @@
+import CartWidget from "../components/CartWidget/CartWidget"
+
 const Cart = () => {
+
     return(
         <div> 
-            Pantalla Carrito
+            <CartWidget />
         </div>
     )
 }

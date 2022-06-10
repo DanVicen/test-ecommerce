@@ -6,11 +6,16 @@ const CartProvider = ({children}) => {
     const [cartListItems, setCartListItems] = useState([])
 
     const addProductToCart = (product) => {
-        setCartListItems([product])
+        let isInCart = cartListItems.find(cartItems => cartItems.id === product.id)
+        if(!isInCart) {
+        return setCartListItems([...cartListItems, product])
+    }
     }
 
+
     const data = {
-        cartListItems        
+        cartListItems,
+        addProductToCart        
     }
 
     return(

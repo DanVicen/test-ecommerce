@@ -22,7 +22,9 @@ const ItemCount = ({ cantidad, setCantidad, setShowButton }) => {
             <p>{cantidad}</p>
             <Button onClick={addCount}>+</Button>
         </div>
-        <Button variant='contained' onClick={() => setShowButton(true)} >Agregar al carrito</Button>
+        {setShowButton && 
+            <Button variant='contained' onClick={() => setShowButton(true)}>Agregar al carrito</Button>
+        }
         </>
     )
 }
