@@ -3,7 +3,6 @@ import Card from '@mui/material/Card'
 import CardContent from '@mui/material/CardContent'
 import { Button } from '@mui/material'
 import ItemCount from '../ItemCount/ItemCount'
-import { Link } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
 import { useState, useContext } from 'react'
 import { ThemeContext } from '../../context/ThemeContext'
@@ -21,7 +20,7 @@ const CardItem = (props) => {
     const { addProductToCart } = useContext(CartContext)
     
     return(
-        <Card sx={{ minWidth: 275 }} className={`item-card-container ${darkTheme ? 'dark-mode' : ''}`}>
+        <Card sx={{ maxWidth: 275 }} className={`item-card-container ${darkTheme ? 'dark-mode' : ''}`}>
             <CardContent>
                 <div className="card-item">
                     <div>
@@ -38,14 +37,17 @@ const CardItem = (props) => {
                             setCantidad={setCantidad}    
                         />
                     </div>
-                    <Button onClick={() => {
+                    <Button variant="contained" onClick={() => {
                         navigate(`/product/${id}`, {
                             state: props,
                         })
                     }}>
-                        <Button variant={'contained'}>Ver detalle</Button>
+                        Ver detalle
                     </Button>
-                    <Button 
+                    <Button
+                        style={{
+                            marginTop: 4,
+                        }} 
                         variant={'contained'}
                         onClick={() =>addProductToCart(props)}
                     >

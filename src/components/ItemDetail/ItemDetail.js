@@ -3,18 +3,15 @@ import Card from "@mui/material/Card"
 import CardContent from "@mui/material/CardContent"
 import './ItemDetail.css'
 import { Button } from '@mui/material'
-import { useState } from "react"
-import { Link } from "react-router-dom"
+import { useState, useContext } from "react"
+import CartContext from '../../context/CartContext'
 
 const ItemDetail = ({data}) => {
     
     const [cantidad, setCantidad] = useState(1)
     const [showButton, setShowButton] = useState(false)
     
-    const addProductToCart = () => {
-        console.log("Producto a agregar", data)
-        console.log("Cantidad", cantidad)
-    }
+    const { addProductToCart } = useContext(CartContext)
 
     return (
         <div>
@@ -37,7 +34,12 @@ const ItemDetail = ({data}) => {
                             setShowButton={setShowButton}
                         />
                         :
-                        <Button variant='contained'><Link style={{ textDecoration: 'none', color:'#FFF' }}to='/cart'>Finalizar compra</Link></Button>}
+                        <Button 
+                            variant='contained' 
+                            onClick={() =>addProductToCart(data)}
+                        >
+                            Finalizar compra
+                        </Button>}
                     </div>
                 </div>
             </CardContent>

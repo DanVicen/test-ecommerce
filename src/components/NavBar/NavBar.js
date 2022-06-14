@@ -67,7 +67,7 @@ const NavBar = () => {
                             {categorias
                             .filter(cat => !cat.mostrarSeparado)
                             .map( (cat) => {
-                                return <MenuItem onClick={handleClose}><Link to={`/products/${cat.id}`}  style={{ color: 'brown', textDecoration: 'none', fontSize: '16px', fontWeight: '100'                         }}>{cat.name}</Link></MenuItem>
+                                return <MenuItem onClick={handleClose}><Link to={`/products/${cat.id}`}  style={{ color: 'brown', textDecoration: 'none', fontSize: '16px', fontWeight: '100' }}>{cat.name}</Link></MenuItem>
                             })}
                         </Menu>
                     </li>

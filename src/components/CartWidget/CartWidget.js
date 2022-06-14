@@ -5,20 +5,28 @@ import MenuItem from '@mui/material/MenuItem'
 import DeleteIcon from '@mui/icons-material/Delete'
 import CartContext from '../../context/CartContext'
 
-const CartWidget = () =>  {
-    const { cartListItems } = useContext(CartContext)
+const CartWidget = () => {
+    const { cartListItems, removeProductFromCart } = useContext(CartContext)
+
     const [anchorEl, setAnchorEl] = useState(null);
+
     const open = Boolean(anchorEl);
+
     const handleClick = (event) => {
         setAnchorEl(event.currentTarget);
     };
+
     const handleClose = () => {
         setAnchorEl(null);
     };
-    
-    return(
+
+    const handleDelete = (product) => {
+        removeProductFromCart(product)
+    }
+
+    return (
         <div className='cart-container-icon'>
-            <ShoppingCartIcon 
+            <ShoppingCartIcon
                 color={'primary'}
                 aria-controls={open ? 'basic-menu' : undefined}
                 aria-haspopup="true"
@@ -31,7 +39,7 @@ const CartWidget = () =>  {
                 open={open}
                 onClose={handleClose}
                 MenuListProps={{
-                'aria-labelledby': 'basic-button',
+                    'aria-labelledby': 'basic-button',
                 }}
             >
                 <div className='container-item-list-cart'>
@@ -40,29 +48,29 @@ const CartWidget = () =>  {
                             <p>Carrito de compras vacío</p>
                         </>
                     )}
-                    {cartListItems.map( (item) => {
-                        return(
-                        <div className='item-cart-prod' key={item.id}>
-                            <div className='cart-prod__image'>
-                                <img 
-                                    src={`/${item.image}`} 
-                                    alt="prod carrito" 
-                                    resizeMode="stretch"
-                                    style={{
-                                        width: 240,
-                                    }}
-                                />
+                    {cartListItems.map((item) => {
+                        return (
+                            <div className='item-cart-prod' key={item.id}>
+                                <div className='cart-prod__image'>
+                                    <img
+                                        src={`/${item.image}`}
+                                        alt="prod carrito"
+                                        resizeMode="stretch"
+                                        style={{
+                                            width: 120,
+                                        }}
+                                    />
+                                </div>
+                                <div className='cart-prod__info'>
+                                    <p>{item.quantity || 1}x {item.title}</p>
+                                    <span>$ {item.amount || item.price}</span>
+                                </div>
+                                <div className='cart-prod__action'>
+                                    <button onClick={() => handleDelete(item)}>
+                                        <DeleteIcon />
+                                    </button>
+                                </div>
                             </div>
-                            <div className='cart-prod__info'>
-                                <p>{item.title}</p>
-                                <span>$ {item.price}</span>
-                            </div>
-                            <div className='cart-prod__action'>
-                                <button>
-                                    <DeleteIcon />
-                                </button>
-                            </div>
-                        </div>
                         )
                     })}
                 </div>

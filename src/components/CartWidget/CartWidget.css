@@ -3,7 +3,8 @@
 }
 
 .item-cart-prod {
-    width: 50px
+    display: flex;
+    flex-direction: row;
 }
 
 .cart-prod__image {
