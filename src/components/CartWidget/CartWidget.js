@@ -1,12 +1,11 @@
 import { useContext, useState } from "react"
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart'
 import Menu from '@mui/material/Menu'
-import MenuItem from '@mui/material/MenuItem'
 import DeleteIcon from '@mui/icons-material/Delete'
 import CartContext from '../../context/CartContext'
 
 const CartWidget = () => {
-    const { cartListItems, removeProductFromCart } = useContext(CartContext)
+    const { cartListItems, removeProductFromCart, removeAllProductsFromCart } = useContext(CartContext)
 
     const [anchorEl, setAnchorEl] = useState(null);
 
@@ -21,7 +20,12 @@ const CartWidget = () => {
     };
 
     const handleDelete = (product) => {
+        console.log(product)
         removeProductFromCart(product)
+    }
+
+    const handleDeleteAll = () => {
+        removeAllProductsFromCart()
     }
 
     return (
@@ -43,9 +47,15 @@ const CartWidget = () => {
                 }}
             >
                 <div className='container-item-list-cart'>
-                    {cartListItems.length === 0 && (
+                    {cartListItems.length === 0 ? (
                         <>
                             <p>Carrito de compras vacío</p>
+                        </>
+                    ) : (
+                        <>
+                            <button onClick={() => removeAllProductsFromCart()}>
+                                <DeleteIcon /> BORRAR TODO
+                            </button>
                         </>
                     )}
                     {cartListItems.map((item) => {

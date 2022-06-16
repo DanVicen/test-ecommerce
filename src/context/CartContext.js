@@ -27,7 +27,7 @@ const CartProvider = ({ children }) => {
 
     const removeProductFromCart = (product) => {
         const existingQuantity = cartListItems.find(cartItem => cartItem.id === product.id)?.quantity
-        if (existingQuantity === 1) {
+        if (!existingQuantity || existingQuantity === 1) {
             setCartListItems(
                 cartListItems.filter(cartItem => cartItem.id !== product.id)
             )
@@ -47,11 +47,15 @@ const CartProvider = ({ children }) => {
         )
     }
 
+    const removeAllProductsFromCart = () => {
+        setCartListItems([])
+    }
 
     const data = {
         cartListItems,
         addProductToCart,
         removeProductFromCart,
+        removeAllProductsFromCart,
     }
 
     return (

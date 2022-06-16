@@ -5,6 +5,7 @@ import './ItemDetail.css'
 import { Button } from '@mui/material'
 import { useState, useContext } from "react"
 import CartContext from '../../context/CartContext'
+import { Link } from "react-router-dom"
 
 const ItemDetail = ({data}) => {
     
