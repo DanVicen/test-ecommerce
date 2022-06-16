@@ -54,7 +54,7 @@ const CartWidget = () => {
                     ) : (
                         <>
                             <button onClick={() => removeAllProductsFromCart()}>
-                                <DeleteIcon /> BORRAR TODO
+                                <DeleteIcon /> Limpiar carrito
                             </button>
                         </>
                     )}

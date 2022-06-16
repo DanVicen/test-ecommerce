@@ -5,13 +5,13 @@ import './ItemDetail.css'
 import { Button } from '@mui/material'
 import { useState, useContext } from "react"
 import CartContext from '../../context/CartContext'
-import { Link } from "react-router-dom"
+import { useNavigate } from 'react-router-dom'
 
 const ItemDetail = ({data}) => {
     
     const [cantidad, setCantidad] = useState(1)
     const [showButton, setShowButton] = useState(false)
-    
+    const navigate = useNavigate()
     const { addProductToCart } = useContext(CartContext)
 
     return (
@@ -37,7 +37,10 @@ const ItemDetail = ({data}) => {
                         :
                         <Button 
                             variant='contained' 
-                            onClick={() =>addProductToCart(data)}
+                            onClick={() => {
+                                addProductToCart(data)
+                                navigate(`/Cart`)
+                            }}
                         >
                             Finalizar compra
                         </Button>}
