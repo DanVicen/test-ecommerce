@@ -5,7 +5,7 @@ import CartContext from "../context/CartContext"
 import { Link } from "react-router-dom"
 
 const Cart = () => {
-    const { cartListItems, totalPrice, removeProductFromCart } = useContext(CartContext)
+    const { cartListItems, totalPrice, removeProductFromCart, getTotal } = useContext(CartContext)
     
     const [quantity, setQuantity] = useState (1)
 
@@ -76,7 +76,7 @@ const Cart = () => {
                                 <Button variant='contained'><Link to="/" style={{ textDecoration: 'none', color:'#FFF' }}>Continuar comprando</Link></Button>
                             </div>
                             <div className='cart-checkout__total'>
-                                <span>Total $ {totalPrice}</span>
+                                <span>Total compra $ {getTotal()}</span>
                             </div>
                             <div>
                                 <Button variant='contained'>Finalizar compra</Button>

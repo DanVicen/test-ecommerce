@@ -10,9 +10,9 @@ const CartProvider = ({ children }) => {
         let isInCart = cartListItems.find(cartItems => cartItems.id === product.id)
         if (!isInCart) {
             setCartListItems([...cartListItems, product])
-            setTotalPrice(totalPrice + product.price)
+            // setTotalPrice(totalPrice + product.price * product.quantity)
             return
-        } 
+        }
         
         // si llega aca es porque el item ya existia en el carrito, entonces le actualizo la cantidad
         setCartListItems(
@@ -53,12 +53,19 @@ const CartProvider = ({ children }) => {
         setCartListItems([])
     }
 
+    const getTotal = () => {
+        return cartListItems.reduce((carry, value) => {
+            return carry + (value.price * value.quantity)
+        }, 0)
+    }
+
     const data = {
         cartListItems,
         addProductToCart,
         removeProductFromCart,
         removeAllProductsFromCart,
         totalPrice,
+        getTotal,
     }
 
     return (
