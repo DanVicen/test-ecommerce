@@ -1,11 +1,32 @@
-import { useContext } from "react"
+import { useContext, useState } from "react"
 import { Container, Button } from "@mui/material"
 import { Delete } from "@mui/icons-material"
 import CartContext from "../context/CartContext"
 import { Link } from "react-router-dom"
 
 const Cart = () => {
-    const { cartListItems, totalPrice } = useContext(CartContext)
+    const { cartListItems, totalPrice, removeProductFromCart } = useContext(CartContext)
+    
+    const [quantity, setQuantity] = useState (1)
+
+    const handleDelete = (product) => {
+        console.log(product)
+        removeProductFromCart(product)
+    }
+
+    const [order, setOrder] = useState({
+        buyer: {},
+        items: cartListItems.map( item => {
+            return {
+                id: item.id,
+                title: item.title,
+                price: item.price,
+                quantity: item.quantity,
+            }
+        } ),
+        total: totalPrice
+    })
+
     return(
             <Container className='container-general'> 
                 <h2>Tu Carrito: </h2>
@@ -15,6 +36,7 @@ const Cart = () => {
                         <h2>Producto</h2>
                         <h2>Precio</h2>
                         <h2>Cantidad</h2>
+                        <h2>Subtotal</h2>
                         <h2>Borrar</h2>
                     </div>
                     {cartListItems.map( (item) => {
@@ -24,21 +46,25 @@ const Cart = () => {
                                 <div className='cart-table__content-img'>
                                     <img src={`/${image}`} 
                                         style={{
-                                            width: 80,
+                                            width: 70,
                                         }}    
                                 />
                                 </div>
                                 <div className='cart-table__content-title'>
-                                    <p>{title}</p>
+                                    <p>{item.title}</p>
                                 </div>
                                 <div className='cart-table__content-price'>
-                                    <p>$ {price}</p>
+                                    <p>$ {item.price}</p>
                                 </div>
                                 <div className='cart-table__content-quantity'>
-                                    <p>{quantity}</p>
+                                    <p>{item.quantity}</p>
                                 </div>
+                                <div className='cart-table__content'>
+                                    <p>$ {item.amount || item.price}</p>
+                                </div>
+                                
                                 <div className='cart-table__content-price'>
-                                    <button className='btn-delete'>
+                                    <button onClick={() => handleDelete(item)}>
                                         <Delete />
                                     </button>
                                 </div>
@@ -47,18 +73,13 @@ const Cart = () => {
                     })}
                     <div className='cart-footer'>
                             <div>
-                                <Button variant='contained'> <Link to="/" style={{ textDecoration: 'none', color:'#FFF' }}>Continuar comprando</Link></Button>
-                            </div>
-                            <div className='cart-checkout__subtotal'>
-                                <p>Subtotal</p>
-                                <span>$ {totalPrice}</span>
+                                <Button variant='contained'><Link to="/" style={{ textDecoration: 'none', color:'#FFF' }}>Continuar comprando</Link></Button>
                             </div>
                             <div className='cart-checkout__total'>
-                                <p>Total</p>
-                                <span>$ {totalPrice}</span>
+                                <span>Total $ {totalPrice}</span>
                             </div>
                             <div>
-                                <Button variant='contained' >Finalizar compra</Button>
+                                <Button variant='contained'>Finalizar compra</Button>
                             </div>
                     </div>
                 </div>

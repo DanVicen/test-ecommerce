@@ -1,8 +1,7 @@
 import CardItem from '../Card/Card'
 import { Grid } from '@mui/material'
 
-const CardList = ({title, products}) => {
-    
+const CardList = ({ title, products }) => {    
     return(
         <>
         <h2>{title}</h2>
@@ -19,7 +18,7 @@ const CardList = ({title, products}) => {
                                 price={price} 
                                 image={image} 
                                 stock={stock} 
-                                description={description}
+                                description={description} 
                             />  
                         </Grid>
                     )

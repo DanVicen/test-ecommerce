@@ -32,7 +32,8 @@ const CardItem = (props) => {
                     <p>{title}</p>
                     <p>${price}</p>
                     <div>
-                        <ItemCount 
+                        <ItemCount
+                            stock={stock} 
                             cantidad={cantidad}
                             setCantidad={setCantidad}    
                         />

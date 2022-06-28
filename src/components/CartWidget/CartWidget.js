@@ -3,6 +3,7 @@ import ShoppingCartIcon from '@mui/icons-material/ShoppingCart'
 import Menu from '@mui/material/Menu'
 import DeleteIcon from '@mui/icons-material/Delete'
 import CartContext from '../../context/CartContext'
+import { Link } from "react-router-dom"
 
 const CartWidget = () => {
     const { cartListItems, removeProductFromCart, removeAllProductsFromCart } = useContext(CartContext)
@@ -55,6 +56,9 @@ const CartWidget = () => {
                         <>
                             <button onClick={() => removeAllProductsFromCart()}>
                                 <DeleteIcon /> Limpiar carrito
+                            </button>
+                            <button variant='contained'> <Link to="/Cart">Ver carrito</Link> 
+                                
                             </button>
                         </>
                     )}

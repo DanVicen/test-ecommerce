@@ -4,11 +4,13 @@ const CartContext = createContext()
 
 const CartProvider = ({ children }) => {
     const [cartListItems, setCartListItems] = useState([])
+    const [totalPrice, setTotalPrice] = useState(0)
 
     const addProductToCart = (product) => {
         let isInCart = cartListItems.find(cartItems => cartItems.id === product.id)
         if (!isInCart) {
             setCartListItems([...cartListItems, product])
+            setTotalPrice(totalPrice + product.price)
             return
         } 
         
@@ -56,6 +58,7 @@ const CartProvider = ({ children }) => {
         addProductToCart,
         removeProductFromCart,
         removeAllProductsFromCart,
+        totalPrice,
     }
 
     return (
