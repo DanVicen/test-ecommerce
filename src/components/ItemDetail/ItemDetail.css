@@ -5,10 +5,10 @@
 .item-card {
     display: flex;
     flex-direction: row;
-    border-top: 1px solid gray ;
-    border-bottom: 1px solid gray;
-    border-right: 1px solid gray ;
-    border-left: 1px solid gray;
+    border-top: 1px solid lightblue ;
+    border-bottom: 1px solid lightblue;
+    border-right: 1px solid lightblue;
+    border-left: 1px solid lightblue;
     border-radius: 3px;
     align-items: flex-start;
 

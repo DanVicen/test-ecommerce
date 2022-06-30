@@ -10,7 +10,6 @@ const Cart = () => {
     const [quantity, setQuantity] = useState (1)
 
     const handleDelete = (product) => {
-        console.log(product)
         removeProductFromCart(product)
     }
 
@@ -29,10 +28,10 @@ const Cart = () => {
 
     return(
             <Container className='container-general'> 
-                <h2>Tu Carrito: </h2>
+                <h1>Tu Carrito</h1>
                 <div className='cart-section'>
                     <div className='col-cart-table__head'>
-                        <h2></h2>
+                        <h2>Imagen</h2>
                         <h2>Producto</h2>
                         <h2>Precio</h2>
                         <h2>Cantidad</h2>
@@ -46,21 +45,21 @@ const Cart = () => {
                                 <div className='cart-table__content-img'>
                                     <img src={`/${image}`} 
                                         style={{
-                                            width: 70,
+                                            width: 80,
                                         }}    
                                 />
                                 </div>
                                 <div className='cart-table__content-title'>
-                                    <p>{item.title}</p>
+                                    <h3>{item.title}</h3>
                                 </div>
                                 <div className='cart-table__content-price'>
-                                    <p>$ {item.price}</p>
+                                    <h3>$ {item.price}</h3>
                                 </div>
                                 <div className='cart-table__content-quantity'>
-                                    <p>{item.quantity}</p>
+                                    <h3>{item.quantity}</h3>
                                 </div>
                                 <div className='cart-table__content'>
-                                    <p>$ {item.amount || item.price}</p>
+                                    <h3>${item.amount || item.price}</h3>
                                 </div>
                                 
                                 <div className='cart-table__content-price'>

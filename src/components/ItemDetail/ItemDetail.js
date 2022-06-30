@@ -36,7 +36,7 @@ const ItemDetail = ({data}) => {
                         />
                         :
                         <Button 
-                            variant='contained' 
+                            variant='contained'
                             onClick={() => {
                                 addProductToCart(data)
                                 navigate(`/Cart`)

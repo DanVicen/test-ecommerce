@@ -9,7 +9,7 @@ const CartProvider = ({ children }) => {
     const addProductToCart = (product) => {
         let isInCart = cartListItems.find(cartItems => cartItems.id === product.id)
         if (!isInCart) {
-            setCartListItems([...cartListItems, product])
+            setCartListItems([...cartListItems, { ...product, quantity: 1 }])
             // setTotalPrice(totalPrice + product.price * product.quantity)
             return
         }

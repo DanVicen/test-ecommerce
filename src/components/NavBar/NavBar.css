@@ -7,8 +7,9 @@
     color: whitesmoke;
 }
 .container-logo {
-    width: 350px;
-    margin-top: 8px;
+    width: 200px;
+    margin-top: 10px;
+    margin-bottom: 2px;
 }
 .container-logo img {
     width: 100%;

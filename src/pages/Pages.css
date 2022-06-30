@@ -7,16 +7,34 @@
     display: flex;
     flex-direction: row;
     border-radius: 3px;
-    align-items: flex-start;
+    align-items: center;
 }
 
 .item {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    font-size: 40px;
 }    
 
 .cart-table__content {
     display: flex;
-    width: 20%
+    width: 15%;
+}
+
+.col-cart-table__head {
+    display: flex;
+    width: 25%;
+    justify-content: center;
+    font-size: 40px;
+
+}
+
+.cart-section {
+    display: flex;
+    width: 15%;
+}
+
+.cart-footer {
+    width: 35%;
 }

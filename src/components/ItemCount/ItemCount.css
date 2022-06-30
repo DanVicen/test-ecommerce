@@ -2,7 +2,6 @@
     display: flex;
     width: 100%;
     justify-content: center;
-    border-top: 1px solid gray;
     margin-bottom: 5px;
-    color: gray;
+    color: blue;
 }
