@@ -75,7 +75,7 @@ const Cart = () => {
                                 <Button variant='contained'><Link to="/" style={{ textDecoration: 'none', color:'#FFF' }}>Continuar comprando</Link></Button>
                             </div>
                             <div className='cart-checkout__total'>
-                                <span>Total compra $ {getTotal()}</span>
+                                <h3>Total ${getTotal()}</h3>
                             </div>
                             <div>
                                 <Button variant='contained'>Finalizar compra</Button>
