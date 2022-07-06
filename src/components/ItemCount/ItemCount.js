@@ -1,6 +1,6 @@
-import { useState } from 'react'
 import { Button } from '@mui/material'
 import './ItemCount.css'
+import AddIcon from '@mui/icons-material/Add'
 
 const ItemCount = ({ cantidad, setCantidad, setShowButton, stock }) => {
     //const { image, title, price, stock } = props
@@ -27,7 +27,19 @@ const ItemCount = ({ cantidad, setCantidad, setShowButton, stock }) => {
                 <Button onClick={addCount}>+</Button>
             </div>
             {setShowButton &&
-                <Button variant='contained' onClick={() => setShowButton(true)}>Agregar al carrito</Button>
+                <Button 
+                    style={{
+                        marginTop: 4,
+                        backgroundColor: 'green',
+                        color: 'whitesmoke',
+                        borderRadius: '24px',
+                        width: '300px',
+                        height: '40px',
+                        fontSize: '18px',
+                    }}  
+                    variant='contained' 
+                    onClick={() => setShowButton(true)}><AddIcon />Agregar al carrito
+                </Button>
             }
         </>
     )

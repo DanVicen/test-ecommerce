@@ -59,6 +59,11 @@ const CartProvider = ({ children }) => {
         }, 0)
     }
 
+    const cleanCartProducts = () => {
+        setTotalPrice(0)
+        setCartListItems([])
+    }
+
     const data = {
         cartListItems,
         addProductToCart,
@@ -66,6 +71,7 @@ const CartProvider = ({ children }) => {
         removeAllProductsFromCart,
         totalPrice,
         getTotal,
+        cleanCartProducts,
     }
 
     return (

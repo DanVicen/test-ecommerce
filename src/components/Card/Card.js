@@ -20,7 +20,7 @@ const CardItem = (props) => {
     const { addProductToCart } = useContext(CartContext)
     
     return(
-        <Card sx={{ maxWidth: 275 }} className={`item-card-container ${darkTheme ? 'dark-mode' : ''}`}>
+        <Card sx={{ maxWidth: 260 }} className={`item-card-container ${darkTheme ? 'dark-mode' : ''}`}>
             <CardContent>
                 <div className="card-item">
                     <div>
@@ -38,16 +38,30 @@ const CardItem = (props) => {
                             setCantidad={setCantidad}    
                         />
                     </div>
-                    <Button variant="contained" onClick={() => {
-                        navigate(`/product/${id}`, {
+                    <Button  
+                            style={{
+                                marginTop: 4,
+                                backgroundColor: 'whitesmoke',
+                                color: 'black',
+                                borderRadius: '24px', 
+                                height: '30px'
+                            }}  
+                            variant="contained" 
+                            onClick={() => {
+                                navigate(`/product/${id}`, {
                             state: props,
-                        })
+                            })
                     }}>
                         Ver detalle
                     </Button>
                     <Button
                         style={{
                             marginTop: 4,
+                            backgroundColor: 'black',
+                            color: 'whitesmoke',
+                            borderRadius: '24px',
+                            height: '40px'
+                        
                         }} 
                         variant={'contained'}
                         onClick={() =>addProductToCart(props)}

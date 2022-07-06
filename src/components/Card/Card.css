@@ -1,25 +1,25 @@
 .card-item img{
-    width: 80%;
+    width: 100%;
 }
 
 .item-card-container {
     background-color: lightpink;
+    width: 280px;
+    margin-left: 12px;
+    height: 400px;
 }
 
 .card-item {
     display: flex;
     flex-direction: column;
-    border-top: 1px solid lightcoral;
-    border-bottom: 1px solid lightcoral;
-    border-right: 1px solid lightcoral;
-    border-left: 1px solid lightcoral;
-    border-radius: 5px;
+    border-radius: 12px;
     background-color: lightpink;
+
 }
 
 .card-item p {
     font-size: 16px;
-    font-weight: 900;
+    font-weight: 600;
     margin-top: 5px;
     margin-bottom: 5px;
 }
@@ -29,6 +29,7 @@
     font-size: 24px;
 }
 
-.item-card Button {
-    width: 300px;
+.item-card button {
+    width: 240px;
+    border-radius: 24px;
 }

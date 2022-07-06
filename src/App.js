@@ -1,4 +1,3 @@
-import { blue } from '@mui/material/colors'
 import './App.css'
 import NavBar from './components/NavBar/NavBar'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
@@ -10,7 +9,6 @@ import Events from './pages/Events'
 import ProductsListContainer from './components/ProductsListContainer/ProductsListContainer'
 import Cart from './pages/Cart'
 import ThemeProvider from './context/ThemeContext'
-import { ThemeContext } from '@emotion/react'
 import { CartProvider } from './context/CartContext'
 
 function App() {

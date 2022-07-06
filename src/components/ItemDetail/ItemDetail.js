@@ -23,7 +23,7 @@ const ItemDetail = ({data}) => {
                         <img src={`/${data.image}`}/>
                     </div>
                     <div className="item-cards">
-                        <p>{data.title}</p>
+                        <h1>{data.title}</h1>
                         <span>Precio unidad: ${data.price}</span>
                         <span>Disponibles: {data.stock}</span>
                         <span>Descripción: {data.description}</span>
@@ -36,6 +36,14 @@ const ItemDetail = ({data}) => {
                         />
                         :
                         <Button 
+                            style={{
+                                marginTop: 4,
+                                backgroundColor: 'blue',
+                                color: 'whitesmoke',
+                                width: '240px',
+                                height: '40px',
+                                fontSize: '18px',
+                            }}  
                             variant='contained'
                             onClick={() => {
                                 addProductToCart(data)
