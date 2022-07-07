@@ -29,7 +29,9 @@ const CardItem = (props) => {
                             resizeMode="stretch"
                         />
                     </div>
-                    <p>{title}</p>
+                    <p style={{
+                        marginTop: 'auto'
+                    }}>{title}</p>
                     <p>${price}</p>
                     <div>
                         <ItemCount
@@ -60,8 +62,7 @@ const CardItem = (props) => {
                             backgroundColor: 'black',
                             color: 'whitesmoke',
                             borderRadius: '24px',
-                            height: '40px'
-                        
+                            height: '40px',
                         }} 
                         variant={'contained'}
                         onClick={() =>addProductToCart(props)}
