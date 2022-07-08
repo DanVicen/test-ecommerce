@@ -2,7 +2,6 @@ import { useContext, useState } from "react"
 import { Container, Button } from "@mui/material"
 import { Delete } from "@mui/icons-material"
 import CartContext from "../context/CartContext"
-import { Link } from "react-router-dom"
 import Modal from '../components/Modal/Modal'
 import TextField from '@mui/material/TextField'
 import { addDoc, collection } from 'firebase/firestore'
@@ -11,8 +10,6 @@ import { useNavigate } from "react-router-dom"
 
 const Cart = () => {
     const { cartListItems, totalPrice, removeProductFromCart, getTotal, cleanCartProducts } = useContext(CartContext)
-
-    //const [quantity, setQuantity] = useState (1)
 
     const handleDelete = (product) => {
         removeProductFromCart(product)
@@ -102,13 +99,13 @@ const Cart = () => {
                                 <span>{item.title}</span>
                             </div>
                             <div className='cart-table__content-price'>
-                                <h3>$ {item.price}</h3>
+                                <span>$ {item.price}</span>
                             </div>
                             <div className='cart-table__content-quantity'>
-                                <h3>{item.quantity}</h3>
+                                <span>{item.quantity}</span>
                             </div>
                             <div className='cart-table__content-price'>
-                                <h3>${item.amount || item.price}</h3>
+                                <span>${item.amount || item.price}</span>
                             </div>
 
                             <div className='cart-table__content-price'>
@@ -168,19 +165,21 @@ const Cart = () => {
                 {success ? (
                     <div>
                         Su código de transacción es: {success} 
-                        <Button
-                            onClick={finishOrder}
-                            style={{
-                                marginTop: 4,
-                                backgroundColor: 'black',
-                                color: 'whitesmoke',
-                                borderRadius: '24px',
-                                height: '40px',
-                                marginLeft: '10px'
-                            }}
-                        >
-                            Aceptar
-                        </Button>
+                        <div>
+                            <Button
+                                onClick={finishOrder}
+                                style={{
+                                    marginTop: 4,
+                                    backgroundColor: 'black',
+                                    color: 'whitesmoke',
+                                    borderRadius: '24px',
+                                    height: '40px',
+                                    marginLeft: '140px',
+                                }}
+                            >
+                                Aceptar
+                            </Button>
+                        </div>
                     </div>
                 ) : (
                     <form className="form-contact" onSubmit={handleSubmit}>
