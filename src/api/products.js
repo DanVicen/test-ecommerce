@@ -1,36 +1,42 @@
 export const categorias = [
     {
         id: 1,
-        name: 'Sin TACC',
+        name: 'Nuestras Cervezas',
         mostrarSeparado: true,
         image: "seccion_celiacos.jpg",
-        backgroundColor: 'brown'
+        backgroundColor: 'brown',
+        categoryName: 'SIN TACC'
     }, 
     {
         id: 2, 
-        name: 'Lunch',
+        name: 'Hamburguesas',
         image: "seccion_lunch.jpg",
-        backgroundColor: 'brown'
+        backgroundColor: 'brown',
+        categoryName: 'LUNCH'
     },
     {
         id: 3, 
-        name: 'Dulces',
-        image: "seccion_dulces.jpg"
+        name: 'Pizzas',
+        image: "seccion_dulces.jpg",
+        categoryName: 'DULCES'
     },
     {
         id: 4, 
-        name: 'Salados',
-        image: "seccion_salados.jpg"
+        name: 'Tablas para compartir',
+        image: "seccion_salados.jpg",
+        categoryName: 'SALADOS'
     },
     {
         id: 5, 
-        name: 'Pastelería',
-        image: "seccion_pasteleria.jpg"
+        name: 'Panchos',
+        image: "seccion_pasteleria.jpg",
+        categoryName: 'PASTELERIA'
     },
     {
         id: 6, 
-        name: 'Chocolates',
-        image: "seccion_chocolates.jpg"
+        name: 'Sandwichs',
+        image: "seccion_chocolates.jpg",
+        categoryName: 'CHOCOLATES',
     },
 ]
 

@@ -9,7 +9,7 @@ const CardList = ({ title, products }) => {
         <Grid container spacing={1}>
             {
                 products.map( (producto) => {
-                    const {id, title, price, image, stock, description} = producto
+                    const {id, title, price, image, stock, description, categoryName} = producto
                     return(
                         <Grid item md={3} key={id}>
                             <CardItem 
@@ -19,6 +19,7 @@ const CardList = ({ title, products }) => {
                                 image={image} 
                                 stock={stock} 
                                 description={description} 
+                                categoryName={categoryName}
                             />  
                         </Grid>
                     )

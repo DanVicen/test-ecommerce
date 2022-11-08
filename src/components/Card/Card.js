@@ -9,7 +9,7 @@ import { ThemeContext } from '../../context/ThemeContext'
 import CartContext from '../../context/CartContext'
 
 const CardItem = (props) => {
-    const { image, title, price, stock, id } = props
+    const { image, title, price, stock, categoryName, id, } = props
     
     const navigate = useNavigate()
     
@@ -20,9 +20,14 @@ const CardItem = (props) => {
     const { addProductToCart } = useContext(CartContext)
     
     return(
-        <Card sx={{ maxWidth: 260 }} className={`item-card-container ${darkTheme ? 'dark-mode' : ''}`}>
+        <Card sx={{ maxWidth: 300,  borderRadius: 8 }} className={`item-card-container ${darkTheme ? 'dark-mode' : ''}`}>
             <CardContent>
                 <div className="card-item">
+                    <div>
+                        <p>
+                            {categoryName}
+                        </p>
+                    </div>
                     <div>
                         <img
                             src={image ? `/${image}` : null}
@@ -46,7 +51,8 @@ const CardItem = (props) => {
                                 backgroundColor: 'whitesmoke',
                                 color: 'black',
                                 borderRadius: '24px', 
-                                height: '30px'
+                                height: '30px',
+                                fontSize: '18px'
                             }}  
                             variant="contained" 
                             onClick={() => {
@@ -63,6 +69,7 @@ const CardItem = (props) => {
                             color: 'whitesmoke',
                             borderRadius: '24px',
                             height: '40px',
+                            fontSize: '18px'
                         }} 
                         variant={'contained'}
                         onClick={() =>addProductToCart(props)}

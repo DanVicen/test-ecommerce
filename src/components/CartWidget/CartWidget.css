@@ -1,5 +1,5 @@
 .cart-container-icon {
-    width: 100px;
+    width: 1000px;
 }
 
 .item-cart-prod {
@@ -8,9 +8,9 @@
 }
 
 .cart-prod__image {
-    width: 20px
+    width: 40px
 }
 
 .container-item-list-cart {
-    width: 50px
+    width: 400px;
 }
