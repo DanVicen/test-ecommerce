@@ -1,6 +1,6 @@
 import ProductSin from "../components/ProductsListContainer/ProductsListContainer"
 
-const SinTacc = () => {
+const Cervezas = () => {
     return(
         <div>
             <div className='seccion-style'>
@@ -13,4 +13,4 @@ const SinTacc = () => {
     )
 }
 
-export default SinTacc
+export default Cervezas

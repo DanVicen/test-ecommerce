@@ -2,7 +2,7 @@ import './App.css'
 import NavBar from './components/NavBar/NavBar'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Home from './pages/Home'
-import SinTacc from './pages/SinTacc'
+import Cervezas from './pages/Cervezas'
 import Contact from './pages/Contact'
 import Detail from './pages/Detail'
 import Events from './pages/Events'
@@ -22,7 +22,7 @@ function App() {
           <NavBar />
           <Routes>
             <Route path='/' element={<Home />}/>
-            <Route path='/SinTacc' element={<SinTacc />}/>
+            <Route path='/Cervezas' element={<Cervezas />}/>
             <Route path='/Events' element={<Events />}/>
             <Route path='/Contact' element={<Contact />}/>
             <Route path='/product/:id' element={<Detail />}/>

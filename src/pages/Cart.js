@@ -169,7 +169,7 @@ const Cart = () => {
                             <Button
                                 onClick={finishOrder}
                                 style={{
-                                    marginTop: 4,
+                                    marginTop: 16,
                                     backgroundColor: 'black',
                                     color: 'whitesmoke',
                                     borderRadius: '24px',
@@ -214,7 +214,7 @@ const Cart = () => {
                                 color: 'whitesmoke',
                                 borderRadius: '24px',
                                 height: '40px',
-                                fontsize: '14px',
+                                fontsize: '30px',
                             }}
                             type="submit"
                         >
