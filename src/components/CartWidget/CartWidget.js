@@ -33,7 +33,7 @@ const CartWidget = () => {
     return (
         <div className='cart-container-icon'>
             <ShoppingCartIcon
-                color={'primary'}
+                color={'black'}
                 aria-controls={open ? 'basic-menu' : undefined}
                 aria-haspopup="true"
                 aria-expanded={open ? 'true' : undefined}
@@ -51,7 +51,7 @@ const CartWidget = () => {
                 <div className='container-item-list-cart'>
                     {cartListItems.length === 0 ? (
                         <>
-                            <p>Carrito de compras vacío</p>
+                            <span><b> Carrito de compras vacío </b></span>
                         </>
                     ) : (
                         <>

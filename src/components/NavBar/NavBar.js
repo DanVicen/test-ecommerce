@@ -28,7 +28,7 @@ const NavBar = () => {
         <AppBar position="static" className={`header-primary ${darkTheme ? 'dark-mode' : ''}`}>
             <Toolbar>
                 <div className='container-logo'>
-                    <img src="/1.png"/>
+                    <img src="/logo tacuara.png"/>
                 </div>
                 <ul className='navbar'>
                     <li>
@@ -58,6 +58,7 @@ const NavBar = () => {
                         <Menu
                             id="basic-menu"
                             anchorEl={anchorEl}
+                            style={{ width: '260px'}}
                             open={open}
                             onClose={handleClose}
                             MenuListProps={{
@@ -79,7 +80,7 @@ const NavBar = () => {
                             variant='contained' 
                             className='navbar__btn'
                         >
-                            <Link to="/products/1" style={{ textDecoration: 'none', color:'#FFF' }}>Cervezas</Link>
+                            <Link to="/products/1" style={{ textDecoration: 'none', color:'#FFF' }}> Nuestras Cervezas</Link>
                         </Button>
                     </li>
                     <li>
@@ -99,11 +100,11 @@ const NavBar = () => {
                             variant='contained' 
                             className='navbar__btn'
                         >
-                            <Link to="/Contact" style={{ textDecoration: 'none', color:'#FFF' }}>Contacto</Link>
+                            <Link to="/Contact" style={{ textDecoration: 'none', color:'#FFF' }}>Sucursales</Link>
                         </Button>
                     </li>
                 </ul>
-                <ThemeSwitch />
+                
                 <CartWidget />
             </Toolbar>
         </AppBar>
