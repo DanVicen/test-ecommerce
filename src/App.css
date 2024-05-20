@@ -2,6 +2,7 @@
   text-align: center;
   background-color: gray;
   padding-bottom: 120px;
+  font-family: 'Roboto';
 }
 
 .App-logo {
@@ -100,7 +101,7 @@
     border-radius: 40px;
     text-transform: none;
     color: black;
-    font-family: 'Lato';
+    font-family: 'Roboto';
     padding: 5px 10px;
     margin-top: 5px;
     font-size: 14px;
@@ -120,6 +121,6 @@ form.form-contact button {
   background: blue;
   text-transform: none;
   color: white;
-  font-family: 'Lato';
+  font-family: 'Helvetica';
   padding: 10px 20px;
   font-size: 14px;cursor: pointer;}

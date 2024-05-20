@@ -38,7 +38,7 @@ const NavBar = () => {
                             variant='contained' 
                             className='navbar__btn'
                         >
-                            <Link to="/" style={{ textDecoration: 'none', color:'#FFF' }}>Home</Link>
+                            <Link to="/" style={{ textDecoration: 'none', color:'#FFF' }}>Inicio</Link>
                         </Button>
                     </li>
                     <li>

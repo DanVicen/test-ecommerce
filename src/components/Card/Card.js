@@ -47,12 +47,12 @@ const CardItem = (props) => {
                     </div>
                     <Button  
                             style={{
-                                marginTop: 4,
+                                marginTop: 24,
                                 backgroundColor: 'whitesmoke',
                                 color: 'black',
                                 borderRadius: '24px', 
                                 height: '30px',
-                                fontSize: '18px'
+                                fontSize: '20px'
                             }}  
                             variant="contained" 
                             onClick={() => {
