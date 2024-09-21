@@ -4,7 +4,7 @@
     border-bottom: #ccc;
     display: flex;
     height: 42px;
-    color: whitesmoke;
+    color: rgb(0, 0, 0);
 }
 .container-logo {
     width: 224px;
@@ -20,16 +20,16 @@
 }
 .header-primary .navbar li {
     margin-right: 40px;
-    color: whitesmoke;
+    color: rgb(0, 0, 0);
     font-size: 24px;
 }
 .header-primary .navbar .navbar__btn {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Monserrat', sans-serif;
     text-transform: none;
-    font-weight: 30;
+    font-weight: 20;
     font-size: 24px;
-    color: whitesmoke;
-    border-radius: 24px;
+    color: rgb(0, 0, 0);
+    border-radius: 60px;
 }
 .header-primary .navbar .navbar__btn:hover {
     font-weight: 600;

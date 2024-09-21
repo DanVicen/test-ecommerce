@@ -34,7 +34,7 @@ const NavBar = () => {
                     <li>
                         <Button 
                             disableRipple 
-                            style={{ backgroundColor: 'black'}} 
+                            style={{ backgroundColor: 'white'}} 
                             variant='contained' 
                             className='navbar__btn'
                         >
@@ -51,7 +51,7 @@ const NavBar = () => {
                             disableRipple
                             variant='text' 
                             className='navbar__btn'
-                            style={{ backgroundColor: 'black'}}
+                            style={{ backgroundColor: 'white'}}
                         >
                             Comidas
                         </Button>
@@ -60,6 +60,7 @@ const NavBar = () => {
                             anchorEl={anchorEl}
                             style={{ width: '260px'}}
                             open={open}
+                            className='navbar__btn'
                             onClose={handleClose}
                             MenuListProps={{
                             'aria-labelledby': 'basic-button',
@@ -68,7 +69,7 @@ const NavBar = () => {
                             {categorias
                             .filter(cat => !cat.mostrarSeparado)
                             .map( (cat) => {
-                                return <MenuItem onClick={handleClose}><Link to={`/products/${cat.id}`}  style={{ color: 'black', textDecoration: 'none', fontSize: '16px', fontWeight: '100' }}>{cat.name}</Link></MenuItem>
+                                return <MenuItem onClick={handleClose}><Link to={`/products/${cat.id}`}  style={{ color: 'white', textDecoration: 'none', fontSize: '18px', fontWeight: '100'}}>{cat.name}</Link></MenuItem>
                             })}
                         </Menu>
                     </li>
@@ -76,7 +77,7 @@ const NavBar = () => {
                         <Button 
                             id="basic-button"
                             disableRipple 
-                            style={{ backgroundColor: 'black'}} 
+                            style={{ backgroundColor: 'white'}} 
                             variant='contained' 
                             className='navbar__btn'
                         >
@@ -86,7 +87,7 @@ const NavBar = () => {
                     <li>
                         <Button 
                             disableRipple 
-                            style={{ backgroundColor: 'black'}} 
+                            style={{ backgroundColor: 'white'}} 
                             variant='contained' 
                             className='navbar__btn'
                         >
@@ -96,7 +97,7 @@ const NavBar = () => {
                     <li>
                         <Button 
                             disableRipple 
-                            style={{ backgroundColor: 'black'}} 
+                            style={{ backgroundColor: 'white'}} 
                             variant='contained' 
                             className='navbar__btn'
                         >
